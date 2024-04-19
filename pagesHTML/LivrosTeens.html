@@ -28,6 +28,10 @@
           display: flex;
           justify-content: center;
           background-color: #d6d7c8;
+          margin-top: 20px;
+        }
+        .container{
+          background-color: #d6d7c8;
         }
         .main{
           background-color: #d6d7c8;
@@ -86,22 +90,16 @@
           </ul>
         </div>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Vendas.html">Vendas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true"></a>
         </li>
       </ul>
     </nav> 
     <!-- place navbar here -->
   </header>
-  <main>
+  <main class = "main">
     <div class="container">
       <!-- Título da página -->
-      <h1 class="my-4 text-center">Livros para Adolescentes</h1>
+      <h1 class="my-4 text-center">Livros Teens</h1>
 
       <!-- Tabela de Livros -->
       <table class="table book-table">
@@ -111,6 +109,8 @@
                   <th>Título</th>
                   <th>Autor</th>
                   <th>Ano de Publicação</th>
+                  <th>Preço</th>
+                  <th>Comprar</th>
               </tr>
           </thead>
           <tbody>
@@ -120,6 +120,8 @@
                   <td>O Sol é para Todos</td>
                   <td>Harper Lee</td>
                   <td>1960</td>
+                  <td>R$ 30,00</td>
+                  <td><button class="btn btn-primary">Comprar</button></td>
               </tr>
               <!-- Linha de exemplo 2 -->
               <tr class="book-item">
@@ -127,6 +129,8 @@
                   <td>Harry Potter e a Pedra Filosofal</td>
                   <td>J.K. Rowling</td>
                   <td>1997</td>
+                  <td>R$ 25,00</td>
+                  <td><button class="btn btn-primary">Comprar</button></td>
               </tr>
               <!-- Adicione mais linhas conforme necessário -->
           </tbody>
