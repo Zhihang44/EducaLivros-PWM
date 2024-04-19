@@ -33,12 +33,6 @@
           padding: 0 20px; 
           background-color: #d6d7c8;
         }
-    
-        .left-text {
-          text-align: left;
-          margin-right: 20px; 
-        }
-    
         .area-right {
           text-align: right; 
         }
@@ -110,16 +104,49 @@
   </nav>  
 
   <main>
-    <div class="left-text">
-      <p>
-        Seja bem-vindo! <br> Este é o porta Educa Brawl <br> Onde temos livros Kids e Teens!
-      </p>
-    </div>
-    <div class="area-right">
-      <img src="img/brawl.png" alt="Brawl">
-    </div>
-      
-    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <p>
+            Seja bem-vindo! <br> Este é o porta Educa Brawl <br> Onde temos livros Kids e Teens!
+          </p>  
+        </div>
+        <div class="col">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <p>Não fui eu que lhe ordenei? Seja forte e corajoso! 
+                  Não se apavore, nem se desanime, pois o Senhor, o seu Deus, estará com você por onde você andar".</p>
+                  <h5>Josué 1:9</h5>
+              </div>
+              <div class="carousel-item">
+                <p>“Ame ao seu próximo como a você mesmo”.</p>
+                  <h5>Mateus 22:39b</h5>
+              </div>
+              <div class="carousel-item">
+                <p>Porque a sua ira dura só um momento; 
+                  no seu favor está a vida; o choro pode durar uma noite, 
+                  mas a balegria vem pela manhã.</p>
+                  <h5>Salmos 30:5</h5>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="area-right">
+            <img src="img/brawl.png" alt="Brawl">
+          </div>
+        </div>
+      </div>
+   </div>
   </main>
 
   <footer>
@@ -146,5 +173,4 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
   </script>
 </body>
-
 </html>
