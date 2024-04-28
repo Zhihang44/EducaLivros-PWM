@@ -146,7 +146,7 @@
           <tbody>
               <!-- Linha de exemplo 1 -->
               <tr class="book-item">
-                  <td><img src="../img/OSol.png" alt="Capa do Livro"></td>
+                  <td><img src="../img/OSol.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('O Sol é para todos', 'Este livro é um clássico da literatura norte-americana, que aborda temas como racismo, injustiça e moralidade. A história se passa na década de 1930, no sul dos Estados Unidos, e é narrada pela pequena Scout Finch. Ela relata a jornada de seu pai, Atticus Finch, um advogado que defende um homem negro acusado injustamente de estuprar uma mulher branca. O livro oferece uma poderosa reflexão sobre a natureza humana, a tolerância e a luta pela justiça.', '../img/OSol.png')"></td>
                   <td>O Sol é para Todos</td>
                   <td>Harper Lee</td>
                   <td>1960</td>
@@ -156,7 +156,7 @@
               </tr>
               <!-- Linha de exemplo 2 -->
               <tr class="book-item">
-                  <td><img src="../img/HPotterPedra.png" alt="Capa do Livro"></td>
+                  <td><img src="../img/HPotterPedra.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('Pedra Filosofal', 'Este é o primeiro livro da famosa série Harry Potter. Ele nos apresenta ao mundo mágico de Hogwarts e aos personagens inesquecíveis criados por J.K. Rowling. A história segue Harry Potter, um jovem bruxo que descobre sua verdadeira identidade no seu aniversário de onze anos. Ele é convidado a frequentar a Escola de Magia e Bruxaria de Hogwarts, onde enfrenta desafios emocionantes, faz amizades duradouras e descobre segredos sobre seu passado.', '../img/HPotterPedra.png')"></td>
                   <td>Harry Potter e a Pedra Filosofal</td>
                   <td>J.K. Rowling</td>
                   <td>1997</td>
@@ -166,7 +166,7 @@
               </tr>
               <!-- Linha de exemplo 3 -->
               <tr class="book-item">
-                  <td><img src="../img/CâmaraSecreta.png" alt="Capa do Livro"></td>
+                  <td><img src="../img/CâmaraSecreta.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('Câmara Secreta', 'Neste segundo livro da série Harry Potter, Harry retorna a Hogwarts para seu segundo ano letivo, onde descobre que a Câmara Secreta foi aberta, libertando um monstro que ameaça os alunos nascidos de trouxas. Junto com seus amigos Ron e Hermione, Harry investiga a origem da Câmara e enfrenta novos desafios enquanto tenta proteger a escola.', '../img/CâmaraSecreta.png')"></td>
                   <td>Harry Potter e a câmara secreta</td>
                   <td>J.K. Rowling</td>
                   <td>1998</td>
@@ -176,7 +176,7 @@
               </tr>
               <!-- Linha de exemplo 4 -->
               <tr class="book-item">
-                  <td><img src="../img/OrdemFenix.png" alt="Capa do Livro"></td>
+                  <td><img src="../img/OrdemFenix.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('Ordem da Fênix', 'No quinto livro da série Harry Potter, Harry retorna a Hogwarts para seu quinto ano e se depara com uma série de desafios. Ele lidera um grupo secreto de estudantes chamado Armada de Dumbledore para ensinar Defesa Contra as Artes das Trevas, enquanto enfrenta a resistência do Ministério da Magia, que se recusa a acreditar na volta de Lord Voldemort. A história culmina em uma batalha épica entre o bem e o mal.', '../img/OrdemFenix.png')"></td>
                   <td>Harry Potter e a Ordem da Fênix</td>
                   <td>J.K. Rowling</td>
                   <td>2003</td>
@@ -208,6 +208,24 @@
       <p>Email: info@educabrawl.com</p>
       <p>Telefone: (123) 456-7890</p>
 </footer>
+<!-- Modal para exibir a sinopse do livro -->
+<div class="modal fade" id="livroModal" tabindex="-1" aria-labelledby="livroModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="livroModalLabel">Sinopse do Livro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <div id="livroInfo">
+          <img id="livroImagem" src="" alt="Capa do Livro" style="width: 50%;">
+          <p id="livroSinopse"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
@@ -216,6 +234,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
   </script>
+  <script>
+    // Função para exibir a sinopse do livro no modal
+    function exibirSinopse(titulo, sinopse, imagem) {
+      document.getElementById('livroImagem').src = imagem;
+      document.getElementById('livroSinopse').innerText = sinopse;
+    }
+  </script>
+  
+  
 </body>
 
 </html>

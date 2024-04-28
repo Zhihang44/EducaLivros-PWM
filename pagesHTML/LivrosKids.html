@@ -6,7 +6,6 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,7 +19,9 @@
     .dropdown:hover .dropdown-menu {
       display: block;
     }
-
+    .dropdown-toggle {
+    border: none;
+    }
     .btn-secondary {
       --bs-btn-bg: "card text-bg-info mb-3";
     }
@@ -72,12 +73,13 @@
 
     .book td,
     .book th {
-      background-color: #fff; /* Cor de fundo da célula */
+      background-color: #fff; 
     }
 
     .book img {
       height: 150px;
       width: 75px;
+      cursor: pointer;
     }
 
     .book button {
@@ -150,7 +152,7 @@
         <tbody>
           <!-- Linha de exemplo 1 -->
           <tr class="book-item">
-            <td><img src="../img/ContosFadas.png" alt="Capa do Livro"></td>
+            <td><img src="../img/ContosFadas.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('Contos de Fadas', 'Contos de Fadas é uma coletânea de histórias clássicas e encantadoras que fazem parte do imaginário popular há séculos. Reunindo contos como Cinderela, Branca de Neve, Chapeuzinho Vermelho e muitos outros, esta obra transporta os leitores para mundos mágicos habitados por princesas, bruxas, fadas madrinhas e criaturas fantásticas. Cada história é única em sua essência, apresentando lições de moral, aventuras emocionantes e finais felizes que cativam leitores de todas as idades. Contos de Fadas continua a ser uma fonte inesgotável de inspiração, ensinando-nos sobre coragem, amor, perseverança e a importância de acreditar nos nossos sonhos.', '../img/ContosFadas.png')"></td>
             <td>Contos de Fadas</td>
             <td>João Silva</td>
             <td>2020</td>
@@ -160,7 +162,7 @@
           </tr>
           <!-- Linha de exemplo 2 -->
           <tr class="book-item">
-            <td><img src="../img/PequenoPrincipe.png" alt="Capa do Livro"></td>
+            <td><img src="../img/PequenoPrincipe.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('Pequeno Príncipe', 'A história começa com um piloto perdido no deserto do Saara, onde ele encontra um pequeno príncipe que veio de um asteroide distante. O Pequeno Príncipe conta suas aventuras e encontros peculiares em sua jornada por diferentes planetas, cada um habitado por um personagem singular, como o Rei, o Vaidoso, o Bêbado e a Raposa. Ao longo do livro, são explorados temas profundos, como amizade, amor, solidão, e a importância de ver além das aparências. A história nos convida a refletir sobre a inocência da infância, a simplicidade da vida e os verdadeiros valores que muitas vezes são esquecidos na correria do mundo adulto.','../img/PequenoPrincipe.png')"></td>
             <td>O Pequeno Príncipe</td>
             <td>Antoine de Saint-Exupéry</td>
             <td>1943</td>
@@ -170,7 +172,7 @@
           </tr>
           <!-- Linha de exemplo 3 -->
           <tr class="book-item">
-            <td><img src="../img/EntreSonhos.png" alt="Capa do Livro"></td>
+            <td><img src="../img/EntreSonhos.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('Entre Sonhos e dragões', 'Entre Sonhos e dragões  é uma obra da escritora Adriana Carranca que mergulha os leitores em uma aventura fantástica repleta de magia, amizade e superação. A história segue a jornada de um grupo de jovens protagonistas que descobrem a existência de um mundo paralelo habitado por seres mágicos, como dragões e fadas. Confrontados com desafios e perigos, os personagens precisam aprender a lidar com suas próprias habilidades especiais e a trabalhar em equipe para enfrentar as ameaças que surgem em seu caminho. Ao longo da narrativa, são explorados temas como amizade, coragem, autoconhecimento e a importância de acreditar nos próprios sonhos. ','../img/EntreSonhos.png')"></td>
             <td>Entre Sonhos e dragões</td>
             <td>Adriana Carranca</td>
             <td>2023</td>
@@ -180,7 +182,7 @@
           </tr>
           <!-- Linha de exemplo 4 -->
           <tr class="book-item">
-            <td><img src="../img/Reinações.png" alt="Capa do Livro"></td>
+            <td><img src="../img/Reinações.png" alt="Capa do Livro" data-toggle="modal" data-target="#livroModal" onclick="exibirSinopse('Reinações de Narizinho', 'Reinações de Narizinho é uma obra clássica da literatura infantil brasileira escrita por Monteiro Lobato. A história se passa no Sítio do Picapau Amarelo, onde a menina Narizinho vive diversas aventuras ao lado de sua boneca Emília, do Visconde de Sabugosa, do Marquês de Rabicó e outros personagens encantadores. O livro é uma coletânea de contos que mesclam fantasia e realidade, levando os leitores a viagens emocionantes por terras distantes e mundos imaginários. Cada capítulo apresenta uma nova aventura, seja enfrentando bruxas malvadas, explorando tesouros escondidos ou fazendo amizade com seres mágicos.', '../img/Reinações.png')"></td>
             <td>Reinações de Narizinho</td>
             <td>Monteiro Lobato</td>
             <td>1931</td>
@@ -209,6 +211,24 @@
     <!-- place footer here -->
   </footer>
 
+  <!-- Modal -->
+  <div class="modal fade" id="livroModal" tabindex="-1" aria-labelledby="livroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="livroModalLabel">Sinopse do Livro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="livroInfo">
+            <img id="livroImagem" src="" alt="Capa do Livro" style="width: 50%;">
+            <p id="livroSinopse"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
@@ -217,6 +237,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
   </script>
+
+ <script>
+  function exibirSinopse(titulo, sinopse, imagem) {
+    document.getElementById('livroImagem').src = imagem;
+    document.getElementById('livroSinopse').innerText = sinopse;
+  }
+</script>
 </body>
 
 </html>
