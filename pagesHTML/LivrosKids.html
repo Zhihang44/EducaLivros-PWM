@@ -38,7 +38,6 @@
     footer {
       text-align: center;
       padding: 20px;
-      display: flex;
       justify-content: center;
       background-color: #d6d7c8;
     }
@@ -46,18 +45,21 @@
     .footer-content {
       display: flex;
       gap: 20px;
+      justify-content: center;
+      align-items: center;
     }
-
     .person {
-      margin-right: 20px;
+      margin-top: -5px;
+      margin-right: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza horizontalmente */
     }
-
     .person img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
     }
-
     .person p {
       text-align: center;
     }
@@ -87,7 +89,8 @@
     }
     .pages{
           text-align: center;
-        }
+    }
+    
   </style>
 </head>
 
@@ -196,18 +199,20 @@
     </div>
   </main>
   <footer>
-    <div class="person">
-      <img src="../img/MinhaFoto.png" alt="Vinicius">
-      <p>Vinicius</p>
-    </div>
-    <div class="person">
-      <img src="../img/Zhihang.png" alt="Zhihang">
-      <p>Zhihang</p>
-    </div>
-    <div class="person">
-      <img src="../img/Fernando.png" alt="Neto">
-      <p>Neto</p>
-    </div>
+    <div class="footer-content">
+      <div class="person">
+        <img src="../img/MinhaFoto.png" alt="Vinicius">
+        <p>Vinicius</p>
+      </div>
+      <div class="person">
+        <img src="../img/Zhihang.png" alt="Zhihang">
+        <p>Zhihang</p>
+      </div>
+      <div class="person">
+        <img src="../img/Fernando.png" alt="Neto">
+        <p>Neto</p>
+      </div>
+    </div>  
       <p>Entre em contato conosco para perguntas, sugestões ou suporte.</p>
       <p>Email: info@educabrawl.com</p>
       <p>Telefone: (123) 456-7890</p>
