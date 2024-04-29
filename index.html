@@ -81,20 +81,33 @@
     .person p {
       text-align: center;
     }
-    .col img{
+    .brawl img{
       width: 220px;
       height: 220px;  
       border-radius: 50%;
       margin-left: 20px; 
     }
-    .featured-books,
-    .event-promotion,
+    .carousel-inner img{
+      width: 220px;
+    }
+    .carousel-inner{
+      background-color: black;
+      border-radius: 30px;
+      width: 100%;
+      height: 400px;
+    }
+    .carousel-inner h2{
+      color: yellow;
+    }
+    .event,
     .about-section,
     .contact-section {
-      width: 500px;
-      height: 220px; /* Definindo a mesma altura para todas as seções */
+      width: 1300px;
+      height: 400px; /* Definindo a mesma altura para todas as seções */
       margin-top: 20px;
       padding: 20px;
+      font-weight: 600;
+      font-size: 35px;
       background-color: #f8f9fa;
       border-radius: 10px;
     }
@@ -155,26 +168,15 @@
         <div class="col">
           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
+              <h2>Destaques</h2>
               <div class="carousel-item active">
-                <p>
-                  Seja bem-vindo! <br> Este é a livraria Educa Brawl <br> Onde temos livros Kids e Teens!
-                </p>
+                <a href="./pagesHTML/LivrosKids.html"><img src="./img/PequenoPrincipe.png" alt="erro" ></a>
               </div>
               <div class="carousel-item">
-                <p>Não fui eu que lhe ordenei? Seja forte e corajoso!
-                  Não se apavore, nem se desanime, pois o Senhor, o seu Deus, estará com você por onde você andar".
-                </p>
-                <h5>Josué 1:9</h5>
+                <a href="./pagesHTML/LivrosTeens.html"><img src="./img/CâmaraSecreta.png" alt="erro"></a>
               </div>
               <div class="carousel-item">
-                <p>“Ame ao seu próximo como a você mesmo”.</p>
-                <h5>Mateus 22:39b</h5>
-              </div>
-              <div class="carousel-item">
-                <p>Porque a sua ira dura só um momento;
-                  no seu favor está a vida; o choro pode durar uma noite,
-                  mas a alegria vem pela manhã.</p>
-                <h5>Salmos 30:5</h5>
+                <a href="./pagesHTML/LivrosKids.html"><img src="./img/EntreSonhos.png" alt="erro"></a> 
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -199,25 +201,25 @@
           </div>
         </div>
         <div class = "col">
-          <img src="img/brawl.png" alt="Brawl">
+          <!--antiga imagem browl--> 
         </div>
         <div class="col">
           <div class="event-promotion">
-            <h2>Eventos e Promoções</h2>
-            <!-- Adicione aqui informações sobre eventos e promoções -->
-            <p>Não perca nosso evento de lançamento de novos livros! E também confira nossas promoções especiais para este mês.</p>
-          </div>
+            <!-- antigo eventos e promoções -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="event">
+          <h2>Eventos</h2>
+          <!-- Adicione aqui informações sobre a EducaBrawl -->
+          <p>A EducaBrawl é uma livraria online dedicada a fornecer uma ampla seleção de livros para crianças e adolescentes. Nosso objetivo é promover a leitura e o aprendizado de forma divertida e envolvente.</p>
         </div>
       </div>
     </div>
     <div class="featured-books">
-      <h2>Livros em Destaque</h2>
-      <!-- Adicione aqui detalhes sobre os livros em destaque -->
-      <p>Aqui estão alguns dos nossos livros mais populares:</p>
-      <ul>
-        <li>Pequeno Príncipe</li>
-        <li>Harry Potter: A Pedra Filosofal</li>
-      </ul>
+      <!--antigo livro em destaques -->
     </div>
   </main>
 
