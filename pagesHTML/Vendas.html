@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Vendas</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    /* CSS personalizado para mostrar o dropdown ao passar o mouse */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .btn-secondary {
+      --bs-btn-bg: "card text-bg-info mb-3";
+    }
+    .dropdown-toggle {
+    border: none;
+    }
+    .form-inline {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+    .nav{
+    --bs-nav-link-color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #d6d7c8;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .person img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .person p {
+      text-align: center;
+    }
+
+    .main {
+      background-color: #d6d7c8;
+      padding: 20px;
+    }
+    img{
+        width: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#about-section">Sobre</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-expanded="false">
+              Biblioteca
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="LivrosKids.html">Livros Kids</a></li>
+              <li><a class="dropdown-item" href="LivrosTeens.html">Livros Teens</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Vendas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true"></a>
+          </li>
+          <li class="nav-item">
+            <div class="container-fluid">
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+              </form>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true"></a>
+          </li>
+        </ul>
+      </nav> 
+    <!-- place navbar here -->
+  </header>
+  <main class="main">
+    <div class="container">
+      <!-- Seção de Compra de Produtos -->
+      <!-- Seção de Compra de Produtos -->
+<!-- Seção de Compra de Produtos -->
+<h2 class="my-4 text-center">Produtos</h2>
+
+<!-- Tabela de Produtos -->
+<table class="table product">
+  <thead>
+    <tr>
+      <th>Imagem</th>
+      <th>Produto</th>
+      <th>Descrição</th>
+      <th>Preço</th>
+      <th>Comprar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Linha de exemplo 1: Boné -->
+    <tr class="product-item">
+      <td><img src="../img/boné.png" alt="Boné"></td>
+      <td>Boné</td>
+      <td>Boné com logo do brawl</td>
+      <td>R$ 20,00</td>
+      <td><button class="btn btn-primary">Comprar</button></td>
+    </tr>
+    <!-- Linha de exemplo 2: Camisa -->
+    <tr class="product-item">
+      <td><img src="../img/camisa.png" alt="Camisa"></td>
+      <td>Camisa</td>
+      <td>Camisa com estampa do brawl</td>
+      <td>R$ 30,00</td>
+      <td><button class="btn btn-primary">Comprar</button></td>
+    </tr>
+    <!-- Linha de exemplo 3: Calça -->
+    <tr class="product-item">
+      <td><img src="../img/bermuda.png" alt="Bermuda"></td>
+      <td>Bermuda</td>
+      <td>Bermuda</td>
+      <td>R$ 25,00</td>
+      <td><button class="btn btn-primary">Comprar</button></td>
+    </tr>
+    <!-- Linha para a venda de Moletom -->
+    <tr class="product-item">
+      <td><img src="../img/moletom.png" alt="Moletom"></td>
+      <td>Moletom</td>
+      <td>Moletom do spike</td>
+      <td>R$ 50,00</td>
+      <td><button class="btn btn-primary">Comprar</button></td>
+    </tr>
+    <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+    </table>
+</div>
+  </main>
+  <footer>
+    <div class="footer-content">
+    <div class="person">
+      <img src="../img/MinhaFoto.png" alt="Vinicius">
+      <p>Vinicius</p>
+    </div>
+    <div class="person">
+      <img src="../img/Zhihang.png" alt="Zhihang">
+      <p>Zhihang</p>
+    </div>
+    <div class="person">
+      <img src="../img/Fernando.png" alt="Neto">
+      <p>Neto</p>
+    </div>
+</div>
+    <p>Entre em contato conosco para perguntas, sugestões ou suporte.</p>
+        <p>Email: info@educabrawl.com</p>
+        <p>Telefone: (123) 456-7890</p>
+    <!-- place footer here -->
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
