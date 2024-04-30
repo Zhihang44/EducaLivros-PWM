@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil do Aluno - EducaBrawl</title>
-  <!-- Links para os estilos CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
     /* Estilos personalizados */
     .info-box {
@@ -37,8 +37,55 @@
 
 <body>
   <header>
-    <!-- Barra de navegação -->
-    <!-- Copie o código da barra de navegação da página original -->
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#about-section">Sobre</a>
+          </li>
+          <div class="dropdown">
+            <button class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Biblioteca
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="pagesHTML/LivrosKids.html">Livros Kids</a></li>
+              <li><a class="dropdown-item" href="pagesHTML/LivrosTeens.html">Livros Teens</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="pagesHTML/Vendas.html">Vendas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="pagesHTML/Login.html">Login</a>
+          </li>
+          <div class="dropdown">
+            <button class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Perfil
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="pagesHTML/Perfil_aluno.html">Aluno</a></li>
+              <li><a class="dropdown-item" href="pagesHTML/Perfil_professor.html">Professor</a></li>
+            </ul>
+          </div>        
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true"></a>
+          </li>
+          <li class="nav-item">
+            <div class="container-fluid">
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+              </form>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true"></a>
+          </li>
+        </ul>
+      </nav> 
+      <!-- place navbar here -->
   </header>
 
   <main>
@@ -78,8 +125,24 @@
   </main>
 
   <footer>
-    <!-- Rodapé da página -->
-    <!-- Copie o código do rodapé da página original -->
+    <div class="footer-content">
+        <div class="person">
+          <img src="img/MinhaFoto.png" alt="Vinicius">
+          <p>Vinicius</p>
+        </div>
+        <div class="person">
+          <img src="img/Zhihang.png" alt="Zhihang">
+          <p>Zhihang</p>
+        </div>
+        <div class="person">
+          <img src="img/Fernando.png" alt="Neto">
+          <p>Neto</p>
+        </div>
+      </div>
+          <p>Entre em contato conosco para perguntas, sugestões ou suporte.</p>
+          <p>Email: info@educabrawl.com</p>
+          <p>Telefone: (123) 456-7890</p>
+  
   </footer>
 
   <!-- Scripts JavaScript -->
