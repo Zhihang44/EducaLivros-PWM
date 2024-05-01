@@ -155,24 +155,19 @@
     <!-- place navbar here -->
   </header>
   <main class="main">
-    <button type="button" class="btn btn-transparent" data-toggle="modal" data-target="#myModal">
-      <img src="../img/EsferaSoDragao.png" alt="Capa do Mangá" class="book-cover">
-    </button>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="customPopup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="customPopupLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Parabéns!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h5 class="modal-title" id="customPopupLabel">Parabéns!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <img src="../img/DragonBall.png" alt="Capa do Mangá" class="book-cover">
             <p>Parabéns, você ganhou o mangá volume 1 de Dragon Ball!!</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary edit-button" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary edit-button" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
@@ -262,13 +257,12 @@
     <!-- place footer here -->
   </footer>
 
-  <!-- Modal -->
   <div class="modal fade" id="livroModal" tabindex="-1" aria-labelledby="livroModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="livroModalLabel">Sinopse do Livro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal-close" aria-label="Fechar"></button>
         </div>
         <div class="modal-body">
           <div id="livroInfo">
@@ -279,7 +273,6 @@
       </div>
     </div>
   </div>
-
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
@@ -294,6 +287,11 @@
     document.getElementById('livroImagem').src = imagem;
     document.getElementById('livroSinopse').innerText = sinopse;
   }
+  document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey && event.key === 'b') {
+        $('#customPopup').modal('show'); // Abre o pop-up personalizado
+      }
+    });
 </script>
 </body>
 
